@@ -1,0 +1,165 @@
+ body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: #fff;
+    text-align: center;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: #121212; }
+    50% { background: #1a1a1a; }
+    100% { background: #121212; }
+}
+
+header {
+    background: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #aaa;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icons a img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+.description {
+    font-size: 1.2em;
+    margin: 20px auto;
+    max-width: 80%;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+}
+
+.player {
+    margin: 20px auto;
+    padding: 20px;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    animation: frequencyAnimation 1.5s infinite alternate;
+}
+
+.play-text {
+    font-size: 1.2em;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+audio {
+    width: 100%;
+    display: none;
+}
+
+#playButton {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#playButton:hover {
+    background: #cc0000;
+    transform: scale(1.1);
+}
+
+@keyframes frequencyAnimation {
+    0% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(0, 255, 0, 1); }
+    100% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); }
+}
+
+.programacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 10px;
+}
+
+.programa {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.programa img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.programa:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.ads-footer {
+    min-height: 100px;
+    margin: 20px 0;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #1e1e1e;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+ 

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <title>RadioHits 24/7</title>
+    <link rel="stylesheet" href="radio.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo de la Radio" class="logo">
+            <h1>RadioHits</h1> 
+            <p class="subtitulo">Éxitos De Todos Los Tiempos</p>
+        </div>
+        <nav class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="face.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="insta.png" alt="Instagram"></a>
+        </nav>
+    </header>
+
+    <section class="description">
+        <p>Bienvenido a RadioHits, la mejor estación con los mayores éxitos de todos los tiempos. Disfruta de una experiencia musical vibrante y llena de energía.</p>
+    </section>
+
+    <section class="player">
+        <p class="play-text">🎵 Haz clic en el botón para escuchar 🎵</p>
+        <audio id="audioPlayer" src="https://fpsnew1.listen2myradio.com:2199/listen.php?ip=82.145.63.6&port=4285&type=s1"></audio>
+        <button id="playButton"><i class="fas fa-play"></i></button>
+        <script>
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playButton = document.getElementById('playButton');
+
+    playButton.addEventListener('click', () => {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playButton.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            audioPlayer.pause();
+            playButton.innerHTML = '<i class="fas fa-play"></i>';
+        }
+    });
+
+    // Crear control de volumen
+    const volumeControl = document.createElement('input');
+    volumeControl.type = 'range';
+    volumeControl.min = 0;
+    volumeControl.max = 1;
+    volumeControl.step = 0.1;
+    volumeControl.value = audioPlayer.volume;
+    volumeControl.style.width = '80%';
+    volumeControl.style.marginTop = '10px';
+    volumeControl.style.cursor = 'pointer';
+    volumeControl.style.transition = '0.3s';
+
+    volumeControl.addEventListener('input', (event) => {
+        audioPlayer.volume = event.target.value;
+    });
+
+    const playerSection = document.querySelector('.player');
+    playerSection.appendChild(volumeControl);
+</script>
+
+    </section>
+
+    <section class="programacion">
+        <div class="programa">
+            <img src="Best.png" alt="Programa 3">
+            <h2>Best Hits</h2>
+            <p>Éxitos, música y diversión. Las canciones más sonadas en RadioHits.</p>
+        </div>
+        <div class="programa">
+            <img src="tec.png" alt="Programa 1">
+            <h2>Techno</h2>
+            <p>La mejor selección electrónica, techno y pop para disfrutar al máximo.</p>
+        </div>
+        <div class="programa">
+            <img src="ro.jpg" alt="Programa 2">
+            <h2>Romantic</h2>
+            <p>Acompáñanos en la noche con las mejores canciones románticas.</p>
+        </div>
+        <div class="programa">
+            <img src="oldhits.png" alt="Programa 4">
+            <h2>Old Hits</h2>
+            <p>Clásicos de los 80 y 90 con nostalgia y ritmo.</p>
+        </div>
+    </section>
+
+    <section class="ads-footer">
+        <h2>Publicidad</h2>
+        <div class="ad-space">
+            <!-- Espacio para anuncio -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TODO LOS DERECHOS SON RESERVADOS RADIOHITS-PROPIEDAD &copy;MARCOSLANZ</p>
+    </footer>
+
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playButton.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                audioPlayer.pause();
+                playButton.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        });
+    </script>
+
+</body>
+</html>
